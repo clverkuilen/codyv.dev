@@ -1,0 +1,4 @@
+baseURL = 'https://codyv.dev/'
+locale = 'en-us'
+title = 'Cody VerKuilen'
+theme = 'codyvdev'
