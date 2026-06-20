@@ -1,4 +1,8 @@
 .DS_Store
-public
+.env
+.env.local
 .hugo_build.lock
+.vscode
+node_modules/
+public
 resources/_gen
