@@ -1,6 +1,11 @@
 {{ define "main" }}
 	<h1>{{ .Title }}</h1>
-	{{ .Content }}
+	{{ if .Params.lead }}
+		<p class="lead">{{ .Params.lead | markdownify }}</p>
+	{{ end }}
+	<hr />
+	<article>{{ .Content }}</article>
+
 	{{ range .Pages }}
 		<section>
 			<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
