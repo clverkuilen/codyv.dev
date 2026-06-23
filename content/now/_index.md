@@ -1,5 +1,4 @@
-+++
-title = 'Now'
-+++
-
-Here is what I'm doing now
+---
+title: 'Now'
+lead: "Here is what I'm doing now"
+---

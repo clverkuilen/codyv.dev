@@ -4,22 +4,27 @@ title = 'Cody VerKuilen'
 theme = 'codyvdev'
 
 [menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
+	[[menus.main]]
+		name = 'Home'
+		pageRef = '/'
+		weight = 10
 
-  [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-	weight = 20
+	[[menus.main]]
+		name = 'Posts'
+		pageRef = '/posts'
+		weight = 20
 
-  [[menus.main]]
-    name = 'Slash'
-    pageRef = '/slashes'
-    weight = 30
+	[[menus.main]]
+		name = 'About'
+		pageRef = '/about'
+		weight = 30
+
+	[[menus.main]]
+		name = '/'
+		pageRef = '/slashes'
+		weight = 40
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
+	[module.hugoVersion]
+		extended = false
+		min = '0.146.0'

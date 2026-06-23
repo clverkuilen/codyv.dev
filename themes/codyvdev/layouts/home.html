@@ -1,4 +1,8 @@
 {{ define "main" }}
+	<h1>{{ .Title }}</h1>
+	{{ if .Params.lead }}
+		<p class="lead">{{ .Params.lead | markdownify }}</p>
+	{{ end }}
 	{{ .Content }}
 	{{ range site.RegularPages }}
 		<section>

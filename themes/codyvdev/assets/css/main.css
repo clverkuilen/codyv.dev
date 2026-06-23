@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import 'reset.css';
 
 /* Base */
 
 :root {
-	--color-black: #272727;
-	--color-white: #f4f4f4;
-	--color-accent: #bd2718;
+	--color-black: #1c1a18;
+	--color-white: #f0ebe4;
+	--color-primary: #2f453a;
+	--color-accent: #a74921;
+	--color-secondary: #eaa62e;
 	--container-width: 40rem;
 	--spacing-xs: 0.25rem;
 	--spacing-sm: 0.5rem;
@@ -21,16 +22,29 @@ html {
 }
 
 body {
-	font-family: 'Figtree', sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Source Serif 4', sans-serif;
+	font-size: 1rem;
 	font-optical-sizing: auto;
 	font-weight: 400;
-	font-style: normal;
-	font-size: 1rem;
 	background-color: var(--color-white);
 	color: var(--color-black);
 }
 
 /* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#logo,
+nav {
+	font-family: 'Figtree', sans-serif;
+}
 
 p,
 ul,
@@ -40,32 +54,50 @@ figure {
 	margin-block-end: var(--spacing-lg);
 }
 
+ul {
+	padding-left: var(--spacing-lg);
+}
+
+h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
 	margin-block-start: var(--spacing-lg);
 	margin-block-end: var(--spacing-sm);
+	color: var(--color-primary);
 }
 
 p {
 	&.lead {
 		font-size: 1.25rem;
+		color: var(--color-primary);
 	}
+}
+
+*::selection {
+	background-color: var(--color-secondary);
 }
 
 a {
 	color: var(--color-accent);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	transition: color var(--easing);
+
+	&:hover {
+		color: var(--color-black);
+	}
+	
+	&:focus-visible {
+		color: var(--color-black);
+		outline: none;
+  		background-color: var(--color-secondary);
+	}
 }
 
 /* Block Elements */
-
-hr {
-	height: 1px;
-	border: none;
-	background-color: #4f4f57;
-	opacity: 0.25;
-}
 
 figure {
 	img {
@@ -78,14 +110,20 @@ figure {
 
 	figcaption {
 		text-align: center;
-		font-size: 0.825rem;
+		font-size: 0.9rem;
+		font-style: italic;
 	}
 }
 
 /* Layout */
 
-main,
-footer {
+header, main, footer, .inner {
+	padding: 0 var(--spacing-md);
+}
+
+main {
+	flex: 1;
+	width: 100vw;
 	max-width: var(--container-width);
 	margin: 0 auto;
 }
@@ -100,9 +138,8 @@ footer {
 header {
 	margin-bottom: var(--spacing-xl);
 	padding: var(--spacing-lg) 0;
-	/* background-color: #f49d00; */
-	background-color: #f4bd2f;
-	color: var(--color-black);
+	background-color: var(--color-primary);
+	color: #fff;
 
 	.inner {
 		display: flex;
@@ -113,10 +150,9 @@ header {
 	a {
 		text-decoration: none;
 		color: inherit;
-		transition: color var(--easing);
 
 		&:hover {
-			color: var(--color-accent);
+			color: var(--color-secondary);
 		}
 	}
 }
@@ -145,8 +181,16 @@ nav {
 			height: 3px;
 			bottom: -3px;
 			left: var(--spacing-sm);
-			background-color: var(--color-accent);
-			transition: all var(--easing);
+			background-color: var(--color-secondary);
+			transition: bottom var(--easing);
+		}
+
+		&.active {
+			color: var(--color-secondary);
+
+			&:focus-visible {
+				color: var(--color-black);
+			}
 		}
 
 		&:hover:after,
@@ -159,6 +203,12 @@ nav {
 /* Footer */
 
 footer {
+	margin-block-start: var(--spacing-lg);
+	background-color: #ddd6cd;
 	padding: var(--spacing-lg) 0;
 	font-size: 0.8rem;
+
+	p {
+		margin-bottom: 0;
+	}
 }

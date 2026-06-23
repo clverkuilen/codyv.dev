@@ -1,6 +1,12 @@
-+++
-title = 'About'
-lead = "About me"
-+++
+---
+title: 'About me'
+lead: "Who is Cody VerKuilen?"
+---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut nulla erat. Vestibulum porttitor, enim in tempor finibus, lacus ligula ullamcorper diam, non volutpat urna massa et nibh. In luctus orci vel neque dictum, a mattis urna pulvinar. Donec non odio sit amet massa porta bibendum. Donec pellentesque cursus lacus, quis rhoncus libero finibus eu. Cras et blandit metus. Praesent bibendum odio libero, quis accumsan urna feugiat eget. Pellentesque imperdiet molestie urna, vitae varius lacus accumsan ut. Mauris sagittis nisl vitae molestie laoreet. Quisque at metus condimentum, consectetur velit a, volutpat justo. Etiam condimentum ex eget dignissim pharetra. In hac habitasse platea dictumst. Pellentesque at elit felis.
+Back in 2005, I learned you could write "Hello World" in a web browser with just Notepad.exe and a file called index.html. I was **hooked** and the rest was history.
+
+Right after graduating from high school, I pursued a bachelor's degree in Computer Information Systems (CIS) at DeVry University in Phoenix, AZ.
+
+With a fresh degree in hand, I joined [Responsive Data](https://responsivedata.com) in 2011 as a junior web designer.
+
+I currently lead design/development/infra/etc at [Responsive Data](https://responsivedata.com). Having a hand in nearly every aspect of the company has kept me on my toes and allows me to satiate my curiosities of what's possible on the web.
